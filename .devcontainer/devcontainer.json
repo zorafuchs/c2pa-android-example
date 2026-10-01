@@ -1,0 +1,27 @@
+{
+  "name": "android-dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--network=host"],
+  "containerEnv": {
+    "ANDROID_SDK_ROOT": "/opt/android-sdk"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-gradle",
+        "redhat.java",
+        "anthropic.claude-code",
+        "anthropic.claude",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "golang.go",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "JetBrains.kotlin-server"
+      ]
+    }
+  },
+  "postCreateCommand": "chmod +x gradlew || true"
+}
